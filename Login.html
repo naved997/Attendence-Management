@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <!-- Bootstrap -->
+	<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+	  <link href="css/style1.css" rel="stylesheet">
+	   <link href="css/enq.css" rel="stylesheet">
+      <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-analytics.js"></script>
+  </head>
+  <body style="padding-top: 70px">
+  	<!-- body code goes here -->
+
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+
+	<script src="js/popper.min.js"></script> 
+	<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light"> <a class="navbar-brand" href="#">Navbar</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+	    <ul class="navbar-nav mr-auto">
+	       <li class="nav-item active">
+                                <a class="nav-link" href="Attendence Design.html"><div class="container"><img src="Images/house (2).png" class="rounded-circle img-fluid" alt="Placeholder image"  id="ellip"><div class="overlay"><div class="text"><b>Home</b></div></div></div><span class="sr-only">(current)</span></a>
+                            </li>
+	       <li class="nav-item active">
+                                <a class="nav-link" href="#"><div class="container"><img src="Images/user (1).png" class="rounded-circle img-fluid" alt="Placeholder image"  id="ellip"><div class="overlay"><div class="text"><b>Register</b></div></div></div><span class="sr-only">(current)</span></a>
+                            </li>
+	    <li class="nav-item active">
+                                <a class="nav-link" href="#"><div class="container"><img src="Images/user (1).png" class="rounded-circle img-fluid" alt="Placeholder image"  id="ellip"><div class="overlay"><div class="text"><b>Register</b></div></div></div><span class="sr-only">(current)</span></a>
+                            </li>
+        </ul>
+		 <ul class="nav navbar-nav ml-auto">
+							
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#"><div class="container"><img src="Images/login.png" class="rounded-circle img-fluid" alt="Placeholder image"  id="ellip"><div class="overlay"><div class="text"><b>Login</b></div></div></div><span class="sr-only">(current)</span></a>
+                            </li>
+			 <li class="nav-item active">
+                                <a class="nav-link" href="#"><div class="container"><img src="Images/user (1).png" class="rounded-circle img-fluid" alt="Placeholder image"  id="ellip"><div class="overlay"><div class="text"><b>Register</b></div></div></div><span class="sr-only">(current)</span></a>
+                            </li>
+		  </ul>
+      </div>
+  </nav>
+	   <section class="forms-section">
+  <h1 class="section-title">Login or Signup</h1>
+  <div class="forms">
+    <div class="form-wrapper is-active">
+      <button type="button" class="switcher switcher-login">
+        Login
+        <span class="underline"></span>
+      </button>
+      <form class="form form-login">
+        <fieldset>
+          <legend>Please, enter your email and password for login.</legend>
+          <div class="input-block">
+            <label for="lemail">E-mail</label>
+            <input id="lemail" type="email" required>
+          </div>
+          <div class="input-block">
+            <label for="lpassword">Password</label>
+            <input id="lpassword" type="password" required>
+          </div>
+        </fieldset>
+        <button type="submit" onClick="login()" class="btn-login" id="lbtn">Login</button>
+      </form>
+    </div>
+    <div class="form-wrapper">
+      <button type="button" class="switcher switcher-signup">
+        Sign Up
+        <span class="underline"></span>
+      </button>
+      <form class="form form-signup">
+        <fieldset>
+          <legend>Please, enter your email, password and password confirmation for sign up.</legend>
+          <div class="input-block">
+            <label for="semail">E-mail</label>
+            <input id="semail" type="email" required>
+          </div>
+          <div class="input-block">
+            <label for="spassword">Password</label>
+            <input id="spassword" type="password" required>
+          </div>
+          <div class="input-block">
+            <label for="spasswordconfirm">Confirm password</label>
+            <input id="spasswordconfirm" type="password" required>
+          </div>
+        </fieldset>
+        <button type="submit" class="btn-signup" id="sbutton">Continue</button>
+      </form>
+    </div>
+  </div>
+</section>
+	<script src="js/bootstrap-4.3.1.js"></script>
+  
+   <script src="js/app.js"></script>
+      
+	  
+  </body>
+	 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+        });
+    </script>
+	  <script type="text/javascript">
+	  const switchers = [...document.querySelectorAll('.switcher')]
+
+switchers.forEach(item => {
+	item.addEventListener('click', function() {
+		switchers.forEach(item => item.parentElement.classList.remove('is-active'))
+		this.parentElement.classList.add('is-active')
+	})
+})
+	  </script>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+	<script src="../js/jquery-3.3.1.min.js"></script>
+
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="../js/popper.min.js"></script> 
+	<script src="../js/bootstrap-4.3.1.js"></script>
+
+</html>
